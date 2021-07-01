@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+const name='saurav kumar gupta';//declaring a variable
+const element=<h1>Hello,{name}</h1>;//Embedded expression using jsx
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <h1>Hello, world!</h1>,element,
   document.getElementById('root')
 );
 
