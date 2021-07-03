@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import App from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 //1.// const name='saurav kumar gupta';//declaring a variable
 // const element=<h1>Hello,{name}</h1>;//Embedded expression using jsx
@@ -109,11 +109,33 @@ import reportWebVitals from './reportWebVitals';
 
 //4(a)//Rendering a component
 //const element=<div />;
-function w(props){
+// function w(props){
+//   return <h1>Hello, {props.name}</h1>;
+// }
+// const e=<w name="saurav" />;
+// ReactDOM.render(
+//   e,document.getElementById('root')
+// );
+
+
+
+//4//(b)composing elements
+//we can create an app that renders Welcome many times
+function welcome(props)
+{
   return <h1>Hello, {props.name}</h1>;
 }
-const e=<w name="saurav" />;
+function app(){
+  return(
+  <div>
+  <welcome name="saurav" />
+  <welcome name="nikhil"/>
+  <welcome name="rishabh"/>
+  </div>
+  );
+}
 ReactDOM.render(
-  e,document.getElementById('root')
+  <App />,
+  document.getElementById('root')
 );
 reportWebVitals();
