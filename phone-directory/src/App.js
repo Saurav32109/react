@@ -8,7 +8,7 @@ class App extends Component {
         <button> Add</button>
         <div>
           <span >Name</span><br />
-          <span>Phone</span>
+          <span>Phon</span>
         </div>
         </div>
     );
